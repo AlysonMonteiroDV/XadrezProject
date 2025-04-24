@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Collections.Generic;
-using tablueiro;
+using tabuleiro;
 
 namespace xadrez
 {
@@ -9,10 +9,10 @@ namespace xadrez
     {
         static void Main(string[] args)
         {
-            Posicao p = new Posicao(3, 4);
+            Tabuleiro tab = new Tabuleiro(8, 9);
 
 
-            Console.WriteLine();
+            Console.WriteLine(tab);
         }
     }
 }
