@@ -1,18 +1,18 @@
-﻿using tablueiro;
+﻿using tabuleiro;
 
 
 namespace tabuleiro
 {
-    internal class Peca
+     class Peca
     {
         public Posicao posicao { get; set; }
         public Cor cor { get;protected set; }
         public int qteMovimentos { get; protected set; }
         public Tabuleiro tab { get; private set; }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
+        public Peca(Tabuleiro tab, Cor cor)
         {
-            this.posicao = posicao;
+            this.posicao = null;
             this.cor = cor;
             this.tab = tab;
             this.qteMovimentos = 0;

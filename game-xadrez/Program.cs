@@ -2,6 +2,8 @@
 using System.Globalization;
 using System.Collections.Generic;
 using tabuleiro;
+using xadrez;
+using game_xadrez;
 
 namespace xadrez
 {
@@ -9,10 +11,16 @@ namespace xadrez
     {
         static void Main(string[] args)
         {
-            Tabuleiro tab = new Tabuleiro(8, 9);
+            Tabuleiro tab = new Tabuleiro(8, 8);
 
 
-            Console.WriteLine(tab);
+            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
+            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
+            tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(2, 4));
+
+            Tela.imprimirTabuleiro(tab);
+
+
         }
     }
 }
