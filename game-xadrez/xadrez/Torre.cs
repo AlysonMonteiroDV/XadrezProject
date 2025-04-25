@@ -60,7 +60,7 @@ namespace xadrez
 
             }
 
-            //acima
+            //esquerda
             pos.definirValores(posicao.linha, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -69,7 +69,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.coluna = pos.coluna + 1;
+                pos.coluna = pos.coluna - 1;
 
             }
 
