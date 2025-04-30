@@ -14,6 +14,7 @@ namespace xadrez
         static void Main(string[] args)
         {
 
+            
 
             try
             {
@@ -25,7 +26,6 @@ namespace xadrez
                     {
 
                         Console.Clear();
-
                         Tela.imprimirPartida(partida);
 
                         Console.WriteLine();
@@ -36,8 +36,6 @@ namespace xadrez
                         bool[,] posicoesPossiveis = partida.tab.peca(origem).MovimentosPossiveis();
                         Console.Clear();
                         Tela.imprimirTabuleiro(partida.tab, posicoesPossiveis);
-
-
 
                         Console.Write("Destino: ");
                         Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
@@ -54,16 +52,18 @@ namespace xadrez
 
                 }
 
-                Tela.imprimirTabuleiro(partida.tab);
-
-
+                Console.Clear();
+                Tela.imprimirPartida(partida);
 
             }
+
+          
             catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
             }
 
+            Console.ReadLine();
         }
 
     }
